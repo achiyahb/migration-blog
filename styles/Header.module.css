@@ -1,0 +1,14 @@
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0070f3;
+    width: 100%;
+    height: 8rem;
+}
+
+.mainDiv span{
+    color: #eaeaea;
+    font-size: 8rem;
+    font-family: Sahadeva;
+}
