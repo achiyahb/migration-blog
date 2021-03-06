@@ -12,3 +12,11 @@
     font-size: 8rem;
     font-family: Sahadeva;
 }
+
+
+@media (max-width: 600px) {
+
+    .mainDiv span{
+        font-size: 2rem;
+    }
+}

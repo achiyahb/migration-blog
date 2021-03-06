@@ -21,9 +21,19 @@ pre{
   color: #FFFFFF;
   direction: ltr;
   padding: 1rem;
+  display: grid;
   border-radius: 2px;
+  width: 100%;
+}
+
+pre p{
+  width: 100%;
 }
 
 .main-img{
+  width: 100%;
+}
+
+.post-body{
   width: 100%;
 }
