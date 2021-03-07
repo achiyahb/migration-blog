@@ -1,6 +1,4 @@
 import {server} from '../../../config'
-import { useEffect } from 'react'
-import Prism from 'prismjs';
 
 
 function createMarkup(item) {
@@ -9,12 +7,7 @@ function createMarkup(item) {
 
 
 const BlogPost = (post) => {
-    useEffect(()=>{
-        // const pre = document.querySelector('pre')
-        // pre.classList.add('language-javascript');
-        // const code = document.querySelector('code')
-        // code.classList.add('language-javascript');
-    })
+
     return (
         <>
             <h1>{post.title}</h1>
@@ -23,20 +16,6 @@ const BlogPost = (post) => {
             <span>מחבר {post.author}</span>
             <div className='post-body'
                  dangerouslySetInnerHTML={createMarkup(post.text)}/>
-            <pre>
-  <code className='language-javascript'>
-  {`
-    onSubmit(e) {
-      e.preventDefault();
-      const job = {
-        title: 'Developer',
-        company: 'Facebook' 
-        };
-      }
-  `}
-  </code>
-</pre>
-
         </>
     )
 }

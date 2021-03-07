@@ -7,9 +7,12 @@ body {
   direction: rtl;
 }
 
+p a{
+  text-decoration: navy;
+}
+
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration: navy;
 }
 
 * {
@@ -22,13 +25,13 @@ pre{
   direction: ltr;
   padding: 1rem;
   display: grid;
+  font-size: 1.5rem;
   border-radius: 2px;
   width: 100%;
+  overflow: auto;
 }
 
-pre p{
-  width: 100%;
-}
+
 
 .main-img{
   width: 100%;
