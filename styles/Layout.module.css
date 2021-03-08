@@ -121,9 +121,11 @@
   .grid {
     width: 100%;
     flex-direction: column;
+
   }
 
   .main{
-    width:95%
+    width:90%;
+    margin-top: 0;
   }
 }

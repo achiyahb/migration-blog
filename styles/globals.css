@@ -40,3 +40,14 @@ pre{
 .post-body{
   width: 100%;
 }
+
+div span{
+  direction: ltr;
+}
+
+
+@media (max-width: 600px) {
+  .main-title{
+    margin: 0;
+  }
+}
