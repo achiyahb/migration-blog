@@ -31,7 +31,30 @@ pre{
   overflow: auto;
 }
 
+.icons{
+  grid-column: 3/4;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
 
+.icon{
+  margin: 0.8rem;
+  cursor: pointer;
+}
+
+.linkedin_icon{
+  margin: 0.88rem 0.8rem 0.8rem 0.8rem;
+  background-color: black;
+  border-radius: 80px;
+  color: #fff;
+  padding: 0.26rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
 .main-img{
   width: 100%;

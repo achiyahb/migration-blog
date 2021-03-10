@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Layout.module.css'
 import OgMetaTags from "../components/OgMetaTags";
+import Posts from "../components/Posts";
+import {server} from "../config";
 
-export default function Home() {
+export default function Home({posts}) {
   return (
     <div>
         <OgMetaTags
@@ -18,9 +20,8 @@ export default function Home() {
                     היי כולם!
                 </h3>
                 <p>שמי אחיה, מפתח full stack </p>
-                <p>כבר מעל שנה אני בתחום הweb</p>
                 <p>התהליך שעברתי, ממנהל עסק של חוגים לילדים למפתח web
-                כולל: לימוד עצמי, קורס פולסטאק ועבודה בתחום</p>
+                , כולל: לימוד עצמי, קורס פולסטאק ועבודה בתחום</p>
                 <p>בדרך שלי אני מרגיש כמהגר שמגלה בכל יום עולם חדש ומופלא</p>
                 <p>ואני אשמח לשתף אתכם בחוויות שלי, ובתובנות מהדרך שעברתי</p>
                 <br/>
@@ -28,9 +29,20 @@ export default function Home() {
                 <p>חלק בו אעלה פוסטים טכניים</p>
                 <p>וחלק בו אעסוק בתחומים הקשורים יותר בתהליך הלמידה, במיינדסט ובהתפחות אישית בתחום התכנות</p>
                 <i className="fab fa-github"/>
+                <Posts posts={posts.posts}/>
             </div>
         </div>
 
     </div>
   )
+}
+
+
+export const getServerSideProps = async () => {
+    const res = await fetch(`${server}/api/posts`)
+    const posts = await res.json()
+    console.log('posts assss',posts)
+    return {
+        props: posts
+    }
 }

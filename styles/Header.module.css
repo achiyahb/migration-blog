@@ -24,13 +24,19 @@
 
 .icon{
     margin: 0.8rem;
+    cursor: pointer;
 }
 
 .linked_icon{
-    margin: 0.8rem;
+    margin: 0.88rem 0.8rem 0.8rem 0.8rem;
     background-color: black;
     border-radius: 80px;
     color: #0070f3;
+    padding: 0.26rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .title{
@@ -51,6 +57,12 @@
 @media screen and (max-width: 992px) {
     .mainDiv span{
         font-size: 3rem;
+    }
+    .icon{
+       display: none;
+    }
+    .linked_icon{
+        display: none;
     }
 }
 
