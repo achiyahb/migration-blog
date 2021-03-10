@@ -71,7 +71,9 @@ pre{
   text-decoration: none;
 }
 
-
+.footer-link{
+  margin-bottom: 2rem;
+}
 
 .main-img{
   width: 100%;
@@ -90,5 +92,12 @@ div span{
 @media (max-width: 600px) {
   .main-title{
     margin: 0;
+  }
+  .posts_main{
+    width: 95%;
+  }
+  .post_container{
+    display: flex;
+    justify-content: flex-end;
   }
 }

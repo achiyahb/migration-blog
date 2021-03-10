@@ -1,6 +1,8 @@
 import {server} from '../../../config'
 import OgMetaTags from "../../../components/OgMetaTags";
 import {FaFacebook, FaGithub, FaLinkedinIn} from "react-icons/fa";
+import Link from "next/link";
+import React from "react";
 
 
 
@@ -32,6 +34,12 @@ const BlogPost = (post) => {
                 </div>
                 <FaFacebook className={'icon'}  size={35} onClick={()=>goToLinkHandler('facebook')}/>
             </div>
+            <Link
+                href={`/`}
+            ><a>
+                <p className={'footer-link'}>חזרה לעמוד הראשי של הבלוג</p>
+            </a>
+            </Link>
         </>
     )
 }

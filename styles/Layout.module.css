@@ -159,12 +159,14 @@
   .grid {
     width: 100%;
     flex-direction: column;
-
   }
 
   .main{
     width:90%;
     margin-top: 0;
+  }
+  .Home_Container{
+    margin: 0 1rem;
   }
 
   .img_div{

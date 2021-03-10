@@ -1,5 +1,7 @@
 import styles from '../styles/Header.module.css'
 import {FaFacebook, FaGithub, FaLinkedinIn} from "react-icons/fa";
+import Link from "next/link";
+import React from "react";
 
 
 
@@ -16,9 +18,14 @@ export default function Header() {
                 <button>t</button>
             </div>
             <div className={styles.title}>
+                <Link
+                    href={`/`}
+                ><a>
                 <span>
                      MIGRATION
                 </span>
+                </a>
+                </Link>
             </div>
 
             <div className={styles.icons}>
