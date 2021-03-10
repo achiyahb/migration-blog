@@ -11,9 +11,12 @@ export default function OgMetaTags({url,title,description,img}) {
                 <title>
                     {title}
                 </title>
+
+
+                                    <meta name="twitter:image" content={img}/>
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={url}/>
-                <meta name="twitter:card" content="summary" />
+
                 <meta
                     property="og:title"
                     content={title}
@@ -22,7 +25,7 @@ export default function OgMetaTags({url,title,description,img}) {
                     property="og:description"
                     content={description}
                 />
-                <meta property="og:image" content={img} />
+                <meta property="og:image"  content={img}/>
             </Head>
         </div>
     );
@@ -30,5 +33,5 @@ export default function OgMetaTags({url,title,description,img}) {
 
 
 
-// <meta property="fb:app_id" content="your fb app id" />
+
 
