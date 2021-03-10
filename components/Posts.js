@@ -1,21 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Post from "./Post";
-import {server} from "../config";
+
 
 
 
 const Posts = ({posts}) => {
     return (
         <div >
-            <div>
+            <h4>הפוסטים:</h4>
+            <div className={'posts_container'}>
                 {
-                    posts.map((post, i) => {
-                        return (
-                            <div>
-                                    <Post post={post} key={i}/>
-                            </div>
-                        );
-                    })
+                    posts.map((post, i) =><Post post={post} key={i}/>)
                 }
             </div>
         </div>

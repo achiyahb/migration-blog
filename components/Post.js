@@ -1,32 +1,42 @@
 import React from 'react';
+import Link from "next/link";
+import styles from '../styles/Post.module.css'
+
 
 const Post = ({post}) => {
-
-
     return (
-        <div >
-            <div>
-                <div
-                    src="https://www.webnode.com/blog/wp-content/uploads/2019/04/blog2.png"
-                    title="Contemplative Reptile"
-                />
-                <div>
-                    <div >
-                        {post.title}
+        <div className={styles.post_container}>
+                <div className={styles.property_card}>
+                    <Link
+                        href={`/blog-post/${post.link}`}
+                    ><a>
+                    <img
+                        className={styles.card_img}
+                        src={post.pictureSrc}
+                        alt={post.title}
+                    />
+                    </a>
+                    </Link>
+                    <div>
+                        <h5 className={styles.title}>
+                            {post.title}
+                        </h5>
+                        <p className={styles.text}>
+                            {post.description}
+                        </p>
                     </div>
-                    <div >
-                        {post.description}
+                    <div className={styles.read_more}>
+                        <Link
+                            href={`/blog-post/${post.link}`}
+                        ><a>
+                            <span >לקריאה נוספת</span>
+                        </a>
+                        </Link>
                     </div>
+
                 </div>
-            </div>
-            <div>
-                <button >
-                    Share
-                </button>
-                <button >
-                    Learn More
-                </button>
-            </div>
+
+
         </div>
     );
 }

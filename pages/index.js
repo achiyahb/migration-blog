@@ -5,6 +5,7 @@ import Posts from "../components/Posts";
 import {server} from "../config";
 
 export default function Home({posts}) {
+    console.log(posts)
   return (
     <div>
         <OgMetaTags
@@ -12,9 +13,6 @@ export default function Home({posts}) {
             title="ברוכים הבאים לMigraion" url="https://d17tfpwcy3k48c.cloudfront.net/"
         />
         <div className={styles.Home_Container}>
-            <div className={styles.img_div}>
-                <img src="https://firebasestorage.googleapis.com/v0/b/text-editor-prokit.appspot.com/o/undraw_feeling_proud_qne1.png?alt=media&token=7f7aba45-fa17-4c71-82a6-f9a81b07aabb"/>
-            </div>
             <div className={styles.text_div}>
                 <h3>
                     היי כולם!
@@ -28,11 +26,12 @@ export default function Home({posts}) {
                 <p>הבלוג יתחלק לשני חלקים</p>
                 <p>חלק בו אעלה פוסטים טכניים</p>
                 <p>וחלק בו אעסוק בתחומים הקשורים יותר בתהליך הלמידה, במיינדסט ובהתפחות אישית בתחום התכנות</p>
-                <i className="fab fa-github"/>
-                <Posts posts={posts.posts}/>
+            </div>
+            <div >
+                <img className={styles.img_div} src="https://firebasestorage.googleapis.com/v0/b/text-editor-prokit.appspot.com/o/undraw_feeling_proud_qne1.svg?alt=media&token=545e424d-4424-4997-9d50-89ec40f58c26"/>
             </div>
         </div>
-
+        <Posts posts={posts}/>
     </div>
   )
 }
@@ -41,7 +40,7 @@ export default function Home({posts}) {
 export const getServerSideProps = async () => {
     const res = await fetch(`${server}/api/posts`)
     const posts = await res.json()
-    console.log('posts assss',posts)
+    console.log('posts work',posts)
     return {
         props: posts
     }
