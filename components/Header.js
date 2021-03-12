@@ -1,11 +1,17 @@
 import styles from '../styles/Header.module.css'
-import {FaFacebook, FaGithub, FaLinkedinIn} from "react-icons/fa";
+import {FaFacebook, FaGithub, FaLinkedinIn,FaAngleRight} from "react-icons/fa";
 import Link from "next/link";
-import React from "react";
-
+import React,{useEffect, useState} from "react";
+import {useRouter} from "next/router";
 
 
 export default function Header() {
+    const router = useRouter()
+
+    const [backArrow, setBackArrow]= useState(true)
+    useEffect(() => {
+        setBackArrow(router.asPath !== '/')
+    }, [router.asPath]);
 
     const goToLinkHandler = (name)=>{
         window.open(name === 'facebook' ? 'https://www.facebook.com/profile.php?id=100013305678737' :
@@ -15,7 +21,12 @@ export default function Header() {
     return (
         <div className={styles.mainDiv}>
             <div className={styles.blog_links}>
-                <button>t</button>
+                <Link
+                    href={`/`}
+                ><a>
+                <FaAngleRight  className={backArrow ? styles.home_icon : styles.none}  size={35}/>
+                </a>
+                </Link>
             </div>
             <div className={styles.title}>
                 <Link

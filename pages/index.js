@@ -5,7 +5,7 @@ import Posts from "../components/Posts";
 import {server} from "../config";
 
 export default function Home({posts}) {
-    console.log(posts)
+
   return (
     <div>
         <OgMetaTags
@@ -40,7 +40,6 @@ export default function Home({posts}) {
 export const getServerSideProps = async () => {
     const res = await fetch(`${server}/api/posts`)
     const posts = await res.json()
-    console.log('posts work',posts)
     return {
         props: posts
     }

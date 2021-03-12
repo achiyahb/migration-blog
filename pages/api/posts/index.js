@@ -5,7 +5,7 @@ export default function handler({ query: { id } }, res) {
         .then(response => {response.json()
             .then(data => {
                 const dataArray = data['documents']
-                const posts = dataArray.filter(post=>post.fields)
+                const posts = dataArray.filter(post=>post.fields.publish.booleanValue === true)
                     .map(post=>{
                         const author = post.fields.author.stringValue
                         const link = post.fields.link.stringValue

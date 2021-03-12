@@ -27,6 +27,15 @@
     cursor: pointer;
 }
 
+.none{
+    display: none;
+}
+
+.home_icon{
+    margin: 0.8rem;
+    cursor: pointer;
+}
+
 .linked_icon{
     margin: 0.88rem 0.8rem 0.8rem 0.8rem;
     background-color: black;
@@ -49,14 +58,15 @@
     grid-column: 1/2;
 }
 
-.blog_links button{
-    display: none;
-}
+
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
     .mainDiv span{
         font-size: 3rem;
+    }
+    .h_icon{
+        width: 70%;
     }
     .icon{
        display: none;

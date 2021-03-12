@@ -46,7 +46,6 @@ const BlogPost = (post) => {
 
 export const getServerSideProps = async (contex) => {
     const res = await fetch(`${server}/api/blog-post/${contex.params.id}`)
-    console.log('page')
     const post = await res.json()
     post.link = `${server}/blog-post/${contex.params.id}`
     return {
