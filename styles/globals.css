@@ -73,8 +73,12 @@ pre{
 
 .main-img{
   width: 100%;
+  height: 400px;
 }
 
+.secret-massage{
+  display: none;
+}
 
 .post-body{
   width: 100%;

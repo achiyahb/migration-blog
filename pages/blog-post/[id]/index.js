@@ -25,6 +25,7 @@ const BlogPost = (post) => {
             <h4>{post.description}</h4>
             <img className='main-img' src={post.pictureSrc}/>
             <span>מחבר {post.author}</span>
+            <span className="secret-massage">סקרפינג נעים חברים</span>
             <div className='post-body'
                  dangerouslySetInnerHTML={createMarkup(post.text)}/>
             <div className={'icons'}>
