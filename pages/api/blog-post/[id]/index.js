@@ -1,8 +1,8 @@
-
+const crossEnv = require('..')
 
 export default function handler({ query: { id } }, res) {
     console.log(id)
-    fetch('https://firestore.googleapis.com/v1/projects/text-editor-prokit/databases/(default)/documents/posts/' + id)
+    fetch(crossEnv(process.env.FIRESTORE_URL) + id)
         .then(response => {response.json()
             .then(json => {
 
