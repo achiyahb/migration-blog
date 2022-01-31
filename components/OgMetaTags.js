@@ -2,8 +2,11 @@ import Head from "next/head";
 import React from 'react'
 import crossEnv from "cross-env";
 
-export default function OgMetaTags({url, title, description, img}) {ֿ
-    const googleAnalyticsTrackingId = crossEnv(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
+
+export default function OgMetaTags({url, title, description, img}) {
+
+    const googleAnalyticsTrackingId = crossEnv(process.env.GOOGLE_ANALYTICS_TRACKING_ID);
+
     return (
         <div>
             <Head>
