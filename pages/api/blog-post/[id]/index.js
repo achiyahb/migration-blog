@@ -1,4 +1,4 @@
-const crossEnv = require('..')
+const crossEnv = require('cross-env')
 
 export default function handler({ query: { id } }, res) {
     console.log(id)
