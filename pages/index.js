@@ -10,7 +10,7 @@ export default function Home({posts}) {
     <div>
         <OgMetaTags
             description="טכנולוגיה, קוד ושאר הדברים המרגשים" img="https://firebasestorage.googleapis.com/v0/b/text-editor-prokit.appspot.com/o/undraw_feeling_proud_qne1.png?alt=media&token=7f7aba45-fa17-4c71-82a6-f9a81b07aabb"
-            title="ברוכים הבאים לMigraion" url="https://d17tfpwcy3k48c.cloudfront.net/"
+            title="ברוכים הבאים לMigraion" url={process.env.BLOG_URL}
         />
         <div className={styles.Home_Container}>
             <div className={styles.text_div}>
@@ -38,6 +38,7 @@ export default function Home({posts}) {
 
 
 export const getServerSideProps = async () => {
+    console.log(server)
     const res = await fetch(`${server}/api/posts`)
     const posts = await res.json()
     return {

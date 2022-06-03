@@ -4,5 +4,6 @@ module.exports = {
         FACEBOOK_PROFILE_URL: process.env.FACEBOOK_PROFILE_URL,
         LINKEDIN_PROFILE_URL: process.env.LINKEDIN_PROFILE_URL,
         GITHUB_PROFILE_URL: process.env.GITHUB_PROFILE_URL,
+        BLOG_URL: process.env.BLOG_URL,
     }
 }

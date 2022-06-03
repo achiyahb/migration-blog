@@ -13,8 +13,9 @@ function createMarkup(item) {
 
 const BlogPost = (post) => {
     const goToLinkHandler = (name)=>{
-        window.open(name === 'facebook' ? 'https://www.facebook.com/profile.php?id=100013305678737' :
-            name === 'github' ? 'https://github.com/achiyahb' : 'https://www.linkedin.com/in/achiya-haviv/', '_blank')
+        const url = name === 'facebook' ? process.env.FACEBOOK_PROFILE_URL :
+            name === 'github' ? process.env.GITHUB_PROFILE_URL : process.env.LINKEDIN_PROFILE_URL;
+        window.open(url, '_blank');
     }
     return (
         <>
