@@ -2,7 +2,6 @@ import React from 'react';
 import Link from "next/link";
 import styles from '../styles/Post.module.css'
 
-
 const Post = ({post}) => {
     return (
         <div className={styles.post_container}>
@@ -36,10 +35,7 @@ const Post = ({post}) => {
                         </a>
                         </Link>
                     </div>
-
                 </div>
-
-
         </div>
     );
 }

@@ -1,9 +1,6 @@
 import React from 'react';
 import Post from "./Post";
 
-
-
-
 const Posts = ({posts}) => {
     return (
         <div className={'posts_main'}>
@@ -16,7 +13,5 @@ const Posts = ({posts}) => {
         </div>
     );
 }
-
-
 
 export default Posts
