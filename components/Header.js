@@ -14,8 +14,10 @@ export default function Header() {
     }, [router.asPath]);
 
     const goToLinkHandler = (name) => {
-        window.open(name === 'facebook' ? process.env.FACEBOOK_PROFILE_URL :
-            name === 'github' ? process.env.GITHUB_PROFILE_URL : process.env.LINKEDIN_PROFILE_URL, '_blank')
+        const url = name === 'facebook' ? process.env.FACEBOOK_PROFILE_URL :
+            name === 'github' ? process.env.GITHUB_PROFILE_URL : process.env.LINKEDIN_PROFILE_URL;
+        console.log(url)
+        window.open(url, '_blank');
     }
 
     return (
