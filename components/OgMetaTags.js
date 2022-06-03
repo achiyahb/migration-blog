@@ -1,6 +1,5 @@
 import Head from "next/head";
-import React from 'react'
-
+import React from 'react';
 
 export default function OgMetaTags({url, title, description, img}) {
 
