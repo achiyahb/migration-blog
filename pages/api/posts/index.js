@@ -1,7 +1,7 @@
-
+import crossEnv from "cross-env";
 
 export default function handler({ query: { id } }, res) {
-    fetch('https://firestore.googleapis.com/v1/projects/text-editor-prokit/databases/(default)/documents/posts')
+    fetch(crossEnv(process.env.FIRESTORE_URL))
         .then(response => {response.json()
             .then(data => {
                 const dataArray = data['documents']
@@ -17,6 +17,5 @@ export default function handler({ query: { id } }, res) {
                     })
                 res.status(200).send({posts})
             })
-
         })
 }
