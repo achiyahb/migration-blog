@@ -1,7 +1,5 @@
-import crossEnv from "cross-env";
-
-export default function handler({ query: { id } }, res) {
-    fetch(crossEnv(process.env.FIRESTORE_URL))
+export default function handler(context, res) {
+    fetch(process.env.FIRESTORE_URL)
         .then(response => {response.json()
             .then(data => {
                 const dataArray = data['documents']
