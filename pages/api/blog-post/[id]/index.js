@@ -1,14 +1,10 @@
-export default function handler({ query: { id } }, res) {
-    fetch(process.env.FIRESTORE_URL + id)
-        .then(response => {response.json()
-            .then(json => {
-                const dataObj = json.fields
-                const newObj = {}
-                for (const [key, value] of Object.entries(dataObj)) {
-                    newObj[key] = [value.stringValue]
-                }
-                res.status(200).send(newObj)
-            })
-
-        })
+export default async function handler({query: {id}}, res) {
+    const response = await fetch(process.env.FIRESTORE_URL + id);
+    const postData = await response.json();
+    const postEntries = Object.entries(postData.fields);
+    const post = postEntries.reduce((acc, [key, value]) => {
+        acc[key] = value.stringValue
+        return acc
+    }, {});
+    res.status(200).send(post);
 }
