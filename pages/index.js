@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Layout.module.css'
 import OgMetaTags from "../components/OgMetaTags";
 import Posts from "../components/Posts";
-import {server} from "../config";
+import {SERVER} from "../config";
 
 export default function Home({posts}) {
 
@@ -38,8 +38,7 @@ export default function Home({posts}) {
 
 
 export const getServerSideProps = async () => {
-    console.log(server)
-    const res = await fetch(`${server}/api/posts`)
+    const res = await fetch(`${SERVER}/api/posts`)
     const posts = await res.json()
     return {
         props: posts
