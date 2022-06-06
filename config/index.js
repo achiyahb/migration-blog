@@ -1,4 +1,4 @@
 
-const dev = process.env.NODE_ENV !== 'production'
+const dev = process.env.NODE_ENVIRONMENT !== 'production';
 
-export const server = dev ? 'http://localhost:8070' : 'https://achiya.dev'
+export const SERVER = dev ? process.env.DEV_URL : process.env.BLOG_URL;

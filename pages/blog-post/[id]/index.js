@@ -1,4 +1,4 @@
-import {server} from '../../../config'
+import {SERVER} from '../../../config'
 import OgMetaTags from "../../../components/OgMetaTags";
 import {FaFacebook, FaGithub, FaLinkedinIn} from "react-icons/fa";
 import Link from "next/link";
@@ -47,9 +47,9 @@ const BlogPost = (post) => {
 }
 
 export const getServerSideProps = async (contex) => {
-    const res = await fetch(`${server}/api/blog-post/${contex.params.id}`)
+    const res = await fetch(`${SERVER}/api/blog-post/${contex.params.id}`)
     const post = await res.json()
-    post.link = `${server}/blog-post/${contex.params.id}`
+    post.link = `${SERVER}/blog-post/${contex.params.id}`
     return {
         props: post
     }
