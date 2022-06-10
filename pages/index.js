@@ -1,8 +1,7 @@
-import Head from 'next/head'
 import styles from '../styles/Layout.module.css'
 import OgMetaTags from "../components/OgMetaTags";
 import Posts from "../components/Posts";
-import {SERVER} from "../config";
+import {BLOG_URL, SERVER} from "../config";
 
 export default function Home({posts}) {
 
@@ -10,7 +9,7 @@ export default function Home({posts}) {
     <div>
         <OgMetaTags
             description="טכנולוגיה, קוד ושאר הדברים המרגשים" img="https://firebasestorage.googleapis.com/v0/b/text-editor-prokit.appspot.com/o/undraw_feeling_proud_qne1.png?alt=media&token=7f7aba45-fa17-4c71-82a6-f9a81b07aabb"
-            title="ברוכים הבאים לMigraion" url={process.env.BLOG_URL}
+            title="ברוכים הבאים לMigraion" url={BLOG_URL}
         />
         <div className={styles.Home_Container}>
             <div className={styles.text_div}>
