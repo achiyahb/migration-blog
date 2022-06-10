@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 export default async function handler(context, res) {
     const response = await fetch(process.env.FIRESTORE_URL)
     const data = await response.json()
@@ -9,7 +11,7 @@ export default async function handler(context, res) {
             const pictureSrc = post.fields.pictureSrc.stringValue
             const description = post.fields.description.stringValue
             const title = post.fields.title.stringValue
-            const createTime = post.createTime
+            const createTime = format(new Date(post.createTime),'MMMM d, y')
             return {author, link, pictureSrc, description, title, createTime}
         })
     res.status(200).send({posts})
