@@ -3,6 +3,7 @@ import {FaFacebook, FaGithub, FaLinkedinIn, FaAngleRight} from "react-icons/fa";
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
+import {goToLinkHandler} from "../helpers/ProfilesLinks";
 
 
 export default function Header() {
@@ -12,12 +13,6 @@ export default function Header() {
     useEffect(() => {
         setBackArrow(router.asPath !== '/')
     }, [router.asPath]);
-
-    const goToLinkHandler = (name) => {
-        const url = name === 'facebook' ? process.env.FACEBOOK_PROFILE_URL :
-            name === 'github' ? process.env.GITHUB_PROFILE_URL : process.env.LINKEDIN_PROFILE_URL;
-        window.open(url, '_blank');
-    }
 
     return (
         <div className={styles.mainDiv}>

@@ -3,20 +3,14 @@ import OgMetaTags from "../../../components/OgMetaTags";
 import {FaFacebook, FaGithub, FaLinkedinIn} from "react-icons/fa";
 import Link from "next/link";
 import React from "react";
-
-
+import {goToLinkHandler} from "../../../helpers/ProfilesLinks";
 
 function createMarkup(item) {
     return {__html: item};
 }
 
-
 const BlogPost = (post) => {
-    const goToLinkHandler = (name)=>{
-        const url = name === 'facebook' ? process.env.FACEBOOK_PROFILE_URL :
-            name === 'github' ? process.env.GITHUB_PROFILE_URL : process.env.LINKEDIN_PROFILE_URL;
-        window.open(url, '_blank');
-    }
+
     return (
         <>
             <OgMetaTags description={post.description} img={post.pictureSrc}
