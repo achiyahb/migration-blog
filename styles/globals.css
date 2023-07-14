@@ -93,6 +93,10 @@ div span{
   direction: ltr;
 }
 
+.privacy{
+  direction: ltr;
+}
+
 @media (max-width: 1200px) {
   .posts_container{
     grid-template-columns: repeat(2 ,1fr);
