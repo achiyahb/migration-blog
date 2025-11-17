@@ -32,9 +32,8 @@ const BlogPost = (post) => {
             </div>
             <Link
                 href={`/`}
-            ><a>
+            >
                 <p className={'footer-link'}>חזרה לעמוד הראשי של הבלוג</p>
-            </a>
             </Link>
         </>
     )

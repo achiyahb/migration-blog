@@ -9,13 +9,12 @@ const Post = ({post}) => {
                     <div>
                         <Link
                             href={`/blog-post/${post.link}`}
-                        ><a>
+                        >
                             <img
                                 className={styles.card_img}
                                 src={post.pictureSrc}
                                 alt={post.title}
                             />
-                        </a>
                         </Link>
                         <div>
                             <h5 className={styles.title}>
@@ -30,9 +29,8 @@ const Post = ({post}) => {
                     <div className={styles.read_more}>
                         <Link
                             href={`/blog-post/${post.link}`}
-                        ><a>
+                        >
                             <span >לקריאה נוספת</span>
-                        </a>
                         </Link>
                     </div>
                 </div>

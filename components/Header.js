@@ -19,19 +19,17 @@ export default function Header() {
             <div className={styles.blog_links}>
                 <Link
                     href={`/`}
-                ><a>
+                >
                     <FaAngleRight className={backArrow ? styles.home_icon : styles.none} size={35}/>
-                </a>
                 </Link>
             </div>
             <div className={styles.title}>
                 <Link
                     href={`/`}
-                ><a>
+                >
                 <span>
                      MIGRATION
                 </span>
-                </a>
                 </Link>
             </div>
 
