@@ -20,6 +20,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "devDependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.23.9",
